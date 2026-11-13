@@ -1,6 +1,6 @@
 # 🚌 DIU Bus Seat Booking System in C
 
-> 🎫 Choose your route, pick your seats, and get your ticket from the terminal.
+> 🎫 **Choose your route, pick your seats, and get your ticket from the terminal.**
 
 [![Maruf Billah — Visit My Portfolio](portfolio-banner.svg)](https://syntaxmaruf-portfolio.curlyriver4.chatgpt.site/)
 
