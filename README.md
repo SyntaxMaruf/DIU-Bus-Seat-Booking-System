@@ -4,6 +4,8 @@
 
 This project is a menu-driven bus seat booking program written in C. It models DIU ORCHID bus trips between DIU and Farmgate and lets passengers reserve seats, pay their fare on the bus, or cancel an existing ticket.
 
+[![Maruf Billah — Visit My Portfolio](portfolio-banner.svg)](https://syntaxmaruf-portfolio.curlyriver4.chatgpt.site/)
+
 ## Features
 
 - Book one or several seats on a selected date, route, and bus.
@@ -62,6 +64,7 @@ DIU-Bus-Seat-Booking-System/
 ├── README.md
 ├── bus_booking_system.c
 ├── bus-animation.html
+├── portfolio-banner.svg
 ├── bus-route-animation.gif
 └── .gitignore
 ~~~
