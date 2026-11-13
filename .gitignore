@@ -1,0 +1,7 @@
+# Local booking data
+orchid_bookings.txt
+
+# Compiled binaries
+bus_booking_system
+bus_booking_system.exe
+*.o

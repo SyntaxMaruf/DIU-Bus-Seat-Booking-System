@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIU Bus Route Animation</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; color: #eaf3ff; background: radial-gradient(ellipse at 50% 0%, #18375b, #07111f 70%); }
+    main { width: min(920px, 100%); overflow: hidden; border: 1px solid #294665; border-radius: 24px; background: #0b192a; box-shadow: 0 24px 80px #02071199; }
+    header { padding: 24px 28px 12px; }
+    .eyebrow { color: #69d4bd; text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 800; }
+    h1 { margin: 8px 0 4px; font-size: clamp(1.5rem, 4vw, 2.35rem); }
+    .sub { color: #a8bbd0; margin: 0; }
+    .scene { position: relative; height: 320px; overflow: hidden; background: linear-gradient(#132b43 0 62%, #1d3445 62%); }
+    .sun { position:absolute; right: 13%; top: 30px; width:64px; height:64px; border-radius:50%; background:#ffd17a; box-shadow:0 0 48px #ffb84d66; }
+    .building { position:absolute; bottom:38%; background:#243d54; border-radius:5px 5px 0 0; }
+    .building:after { content:""; position:absolute; inset:12px 9px; background:repeating-linear-gradient(90deg,#72b7c4 0 5px,transparent 5px 18px), repeating-linear-gradient(0deg,transparent 0 14px,#72b7c4 14px 19px); opacity:.55; }
+    .b1 { left:5%; width:76px; height:110px; }.b2 { left:17%; width:112px; height:158px; background:#304961; }.b3 { right:20%; width:88px; height:124px; }.b4 { right:7%; width:120px; height:175px; background:#304961; }
+    .road { position:absolute; bottom:0; width:100%; height:39%; background:#263443; border-top:4px solid #4d6475; }
+    .lane { position:absolute; top:51%; left:0; width:200%; border-top:4px dashed #e8cc84; animation: lane-move 1.1s linear infinite; }
+    .bus { position:absolute; z-index:2; left:-235px; bottom:17%; width:218px; height:95px; animation: drive 9s ease-in-out infinite; filter:drop-shadow(0 12px 12px #0007); }
+    .bus-body { position:absolute; inset:8px 6px 16px; border-radius:20px 28px 10px 10px; background:linear-gradient(160deg,#f5a83b,#dc6f2d); border:3px solid #ffd28a; }
+    .bus-front { position:absolute; top:18px; right:9px; width:34px; height:37px; border-radius:8px 16px 5px 5px; background:#9fe4ef; border:3px solid #fff0cd; }
+    .window { position:absolute; top:17px; left:18px; width:39px; height:32px; border-radius:6px; background:#9fe4ef; border:3px solid #fff0cd; box-shadow:46px 0 #9fe4ef,46px 0 0 3px #fff0cd; }
+    .label { position:absolute; top:56px; left:19px; color:#492b1b; font-size:11px; font-weight:900; letter-spacing:.04em; }
+    .wheel { position:absolute; bottom:5px; width:32px; height:32px; border-radius:50%; background:#101b27; border:6px solid #8797a4; animation: wheel-spin .7s linear infinite; }
+    .w1 { left:37px; }.w2 { right:32px; }
+    .stop { position:absolute; z-index:3; bottom:39%; color:#d2e1ef; font-size:.76rem; font-weight:750; }
+    .s1 { left:8%; }.s2 { left:45%; }.s3 { right:8%; }
+    footer { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 28px 24px; color:#a8bbd0; font-size:.9rem; }
+    .pill { border:1px solid #33536d; border-radius:999px; padding:7px 11px; color:#9be0d0; white-space:nowrap; }
+    @keyframes drive { 0% { left:-235px; } 42% { left:42%; } 52% { left:42%; } 100% { left:calc(100% + 20px); } }
+    @keyframes lane-move { to { transform:translateX(-50%); } }
+    @keyframes wheel-spin { to { transform:rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; } }
+    @media (max-width:520px) { .scene { height:260px; }.bus { transform:scale(.82); transform-origin:left bottom; }.stop { font-size:.65rem; } footer { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">DIU Transit • Route Preview</div>
+      <h1>DIU to Farmgate</h1>
+      <p class="sub">A small animated bus ride inspired by the booking system route.</p>
+    </header>
+    <section class="scene" role="img" aria-label="An orange bus travels through a city scene along the DIU to Farmgate route">
+      <div class="sun"></div><div class="building b1"></div><div class="building b2"></div><div class="building b3"></div><div class="building b4"></div>
+      <span class="stop s1">DIU</span><span class="stop s2">MIRPUR</span><span class="stop s3">FARMGATE</span>
+      <div class="road"><div class="lane"></div></div>
+      <div class="bus"><div class="bus-body"><div class="window"></div><div class="bus-front"></div><span class="label">ORCHID • DIU</span></div><div class="wheel w1"></div><div class="wheel w2"></div></div>
+    </section>
+    <footer><span>Bus Seat Booking System · C console project</span><span class="pill">Route animation preview</span></footer>
+  </main>
+</body>
+</html>
