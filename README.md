@@ -13,7 +13,7 @@ This project is a menu-driven bus seat booking program written in C. It models D
 - Charge an advance booking fee for future-date reservations; same-day bookings have no advance fee.
 - Pay the travel fare on the bus, with no advance booking fee.
 - Cancel all active seats associated with a ticket number.
-- Save booking records between runs in `orchid_bookings.txt`.
+- Save booking records between runs in orchid_bookings.txt.
 - Validate menu choices, passenger names, and travel dates; past dates are rejected.
 
 ## Requirements
@@ -25,23 +25,23 @@ This project is a menu-driven bus seat booking program written in C. It models D
 
 From this folder, compile with GCC:
 
-```bash
+~~~bash
 gcc -std=c99 -Wall -Wextra -pedantic bus_booking_system.c -o bus_booking_system
-```
+~~~
 
 Run on Linux or macOS:
 
-```bash
+~~~bash
 ./bus_booking_system
-```
+~~~
 
 Run on Windows Command Prompt:
 
-```bat
+~~~bat
 bus_booking_system.exe
-```
+~~~
 
-The program creates or updates `orchid_bookings.txt` in its current working directory. Keep this file if you want to retain booking records between runs. Remove it only if you want to reset the local demo data.
+The program creates or updates orchid_bookings.txt in its current working directory. Keep this file if you want to retain booking records between runs. Remove it only if you want to reset the local demo data.
 
 ## How to use
 
@@ -49,25 +49,24 @@ The program creates or updates `orchid_bookings.txt` in its current working dire
 2. For a reservation, enter passenger category and name, travel date, direction, boarding and destination stations, and bus.
 3. Choose the number of seats and enter each seat number shown as available.
 4. Review the fare and confirm. The program prints a ticket number and receipt.
-5. Choose **Pay Fare On Bus** to record a same-day ride without an advance fee, or **Cancel Ticket** and enter the ticket number to cancel its active seats.
+5. Choose Pay Fare On Bus to record a same-day ride without an advance fee, or Cancel Ticket and enter the ticket number to cancel its active seats.
 
 ## Bus animation
 
-The animated bus above appears directly on the GitHub repository overview. For a larger, interactive route scene, open [`bus-animation.html`](bus-animation.html) in a modern web browser. It uses only HTML and CSS and needs no additional packages.
+The animated bus above appears directly on the GitHub repository overview. For a larger, interactive route scene, open bus-animation.html in a modern web browser. It uses only HTML and CSS and needs no additional packages.
 
 ## Project structure
 
-```text
+~~~text
 DIU-Bus-Seat-Booking-System/
 ├── README.md
 ├── bus_booking_system.c
 ├── bus-animation.html
-├── assets/
 ├── bus-route-animation.gif
 └── .gitignore
-```
+~~~
 
-`orchid_bookings.txt` is generated when the program saves its first confirmed booking and is intentionally excluded from version control.
+orchid_bookings.txt is generated when the program saves its first confirmed booking and is intentionally excluded from version control.
 
 ## Notes and limitations
 
