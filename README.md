@@ -2,8 +2,6 @@
 
 > 🎫 Choose your route, pick your seats, and get your ticket from the terminal.
 
-![Animated DIU bus traveling from DIU to Farmgate](bus-route-animation.gif)
-
 [![Maruf Billah — Visit My Portfolio](portfolio-banner.svg)](https://syntaxmaruf-portfolio.curlyriver4.chatgpt.site/)
 
 ## 👋 About Me
@@ -241,4 +239,3 @@ bus_booking_system.exe
 📌 No license has been selected for this repository.
 
 👨‍💻 **Maruf Billah · CSE · Daffodil International University**
-
